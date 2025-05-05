@@ -5,166 +5,171 @@
     font-style: normal;
     font-display: swap;
 }
+
 body {
     margin: 0;
-    font-family: 'Montserrat', sans-serif; /* Use the custom font */
-    background-color: #b2cac9; /* Dark background for the entire page */
-    text-decoration-color: #012c1f; /* Set the text decoration color to dark green */
-    color: #012c1f; /* Set the default text color to dark green */
+    font-family: 'Montserrat', sans-serif;
+    background-color: #b2cac9;
+    text-decoration-color: #012c1f;
+    color: #012c1f;
 }
 
 .container {
     display: grid;
-    grid-template-rows: 30px auto 1fr auto 30px; /* Reduce the height of the banner and adjust row heights */
-    grid-template-columns: 0.3fr 5fr 0.3fr; /* Keep the same column structure */
+    grid-template-rows: 30px auto 1fr auto 30px;
+    grid-template-columns: 0.3fr 5fr 0.3fr;
     height: 100vh;
     grid-template-areas: 
-        "header         header          header"
-        "left-aside     banner          right-aside"
-        "main            main            main"
-        "footer         footer          footer";
+        "header header header"
+        "left-aside banner right-aside"
+        "main main main"
+        "footer footer footer";
     grid-gap: 10px;
     padding: 3px;
     font-weight: 300;
     font-size: 20px;
-    background-color: #033b2a; /* Dark background for the entire container */
-    align-items: stretch; /* Ensure items stretch to fill their grid cells */
-    justify-items: stretch; /* Ensure items stretch horizontally */
+    background-color: #033b2a;
+    align-items: stretch;
+    justify-items: stretch;
 }
 
-@media (max-width: 678px) {
+@media (max-width: 768px) {
     .container {
-        grid-template-rows: 50px auto 1fr auto 50px;
-        grid-template-columns: 1fr; /* Single column layout */
+        grid-template-rows: auto auto 1fr auto;
+        grid-template-columns: 1fr;
         grid-template-areas: 
             "header"
             "banner"
             "main"
-            "low-content"
             "footer";
     }
-
-    .right-aside {
-        display: none; /* Hide the right-side content */
-    }
-
-    .left-aside {
-        display: none; /* Hide the left-side content */
-    }
-
-    footer {
-        grid-area: footer;
-        align-self: end; /* Ensure the footer stays at the bottom */
+    .left-aside, .right-aside {
+        display: none;
     }
 }
+
 header {
     grid-area: header;
     background-color: #012c1f;
     color: white;
-    padding: 20px 30px; /* Increase padding for spacing */
+    padding: 20px 30px;
     display: flex;
-    align-items: center; /* Center content vertically */
-    justify-content: flex-start; /* Align content to the left */
-    height: 150px; /* Increase the height of the header */
+    align-items: center;
+    justify-content: flex-start;
+    height: 150px;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
 }
 
 .profile {
     display: flex;
-    align-items: center; /* Align the image and name vertically */
-    gap: 20px; /* Add more spacing between the image and name */
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .profile-pic {
-    width: 160px; /* Increase the width of the profile picture */
-    height: 160px; /* Increase the height of the profile picture */
-    border-radius: 50%; /* Keep the image circular */
-    object-fit: cover; /* Ensure the image fits within the circle */
-    border: 3px solid white; /* Add a thicker white border around the image */
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid white;
 }
-@media (max-width: 678px) {
+
+@media (max-width: 768px) {
     .profile-pic {
-        width: 60px; /* Reduce size for smaller screens */
-        height: 60px;
+        width: 80px;
+        height: 80px;
     }
 }
 
 .profile-name {
-    font-size: 20px; /* Set a slightly smaller font size for the name */
-    font-weight: bold; /* Make the name bold */
-    margin: 0; /* Remove default margin */
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
 }
+
 .navbar {
-    background-color: #b2cac9; /* Dark background for the navbar */
-    padding: 10px 20px; /* Add some padding around the navbar */
-    color: #012c1f; /* Set text color to dark green */
+    background-color: #b2cac9;
+    padding: 10px 20px;
+    color: #012c1f;
+    overflow-x: auto;
 }
 
 .nav-list {
-    list-style: none; /* Remove default list styling */
-    display: flex; /* Display list items in a horizontal row */
-    justify-content: center; /* Center the items horizontally */
-    margin: 0; /* Remove default margin */
-    padding: 0; /* Remove default padding */
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
 .nav-list li {
-    margin: 0 50px; /* Add spacing between list items */
+    margin: 0;
 }
 
 .nav-list a {
-    text-decoration: none; /* Remove default underline */
-    color: #012c1f; /* Set link text color to dark green */
-    font-weight: 900; /* Make the text bold */
-    font-size: 16px; /* Set font size */
-    position: relative; /* Position relative for the pseudo-element */
-    transition: color 0.3s, transform 0.3s; /* Smooth transition for text color and scaling */
+    text-decoration: none;
+    color: #012c1f;
+    font-weight: 900;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s, transform 0.3s;
 }
 
 .nav-list a::after {
-    content: ''; /* Add an empty content for the underline */
-    position: absolute; /* Position it relative to the link */
-    left: 50%; /* Start from the middle */
-    bottom: -5px; /* Position slightly below the text */
-    width: 0; /* Start with no width */
-    height: 4px; /* Set the thickness of the underline */
-    background-color: #9e0606; /* Set the underline color to red */
-    transition: all 0.3s ease; /* Smooth animation for the underline */
-    transform: translateX(-50%); /* Center the underline */
-}
-.nav-list a.active::after {
     content: '';
     position: absolute;
-    bottom: -5px;
     left: 50%;
+    bottom: -5px;
+    width: 0;
+    height: 4px;
+    background-color: #9e0606;
+    transition: all 0.3s ease;
     transform: translateX(-50%);
+}
+
+.nav-list a.active::after {
     width: 100%;
     height: 3px;
-    background-color: #9e0606; /* Red underline */
+    background-color: #9e0606;
     border-radius: 2px;
 }
 
 .nav-list a:hover {
-    transform: scale(1.1); /* Slightly increase the size of the text */
+    transform: scale(1.1);
 }
 
 .nav-list a:hover::after {
-    width: 100%; /* Expand the underline to full width */
+    width: 100%;
 }
 
 .banner {
     grid-area: banner;
-    background-color: #b2cac9; /* Dark background for the banner */
+    background-color: #b2cac9;
     text-align: center;
-    padding: 15px; /* Reduce padding to make the banner smaller */
-    color: #012c1f; /* Set text color for the banner */
-    margin-bottom: 10px; /* Add spacing below the banner */
+    padding: 15px;
+    color: #012c1f;
+    margin-bottom: 10px;
 }
-.left-aside {
+
+.left-aside, .right-aside {
     grid-area: left-aside;
-    background-color: #b2cac9; /* Dark background for the left aside */
+    background-color: #b2cac9;
     text-align: center;
     padding: 20px;
-    color: #012c1f; /* Set text color for the left aside */
+    color: #012c1f;
 }
 
 .main {
@@ -177,24 +182,23 @@ header {
     padding: 20px;
     background-color: #f4f4f4;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     color: #012c1f;
-    font-family: 'Montserrat', sans-serif;
-    min-height: 80vh; /* Increased height to ensure all content fits */
+    min-height: 80vh;
     margin: 20px auto;
-    width: 95%; /* Ensure the main content takes up more width */
-    max-width: 1200px; /* Optional: Set a maximum width for larger screens */
-    overflow-y: auto; /* Add vertical scrolling if content overflows */
+    width: 95%;
+    max-width: 1200px;
+    overflow-y: auto;
     box-sizing: border-box;
 }
-@media (max-width: 678px) {
+
+@media (max-width: 768px) {
     .main {
-        width: 100%; /* Full width for smaller screens */
-        padding: 10px; /* Adjust padding for smaller screens */
+        width: 100%;
+        padding: 10px;
     }
 }
 
-/* Style the image in the home section */
 .main img {
     max-width: 100%;
     height: auto;
@@ -202,88 +206,79 @@ header {
     margin-bottom: 20px;
 }
 
-/* Style the paragraph in the home section */
 .main p {
     font-size: 16px;
     line-height: 1.6;
     margin: 0;
 }
 
-.right-aside {
-    grid-area: right-aside;
-    background-color: #b2cac9; /* Dark background for the right aside */
-    text-align: center;
-    padding: 20px;
-    color: #012c1f; /* Set text color for the right aside */
-}
 .footer {
     grid-area: footer;
-    width: 100%; /* Ensure it spans full width */
+    width: 100%;
     background-color: #012c1f;
     color: white;
     text-align: center;
     padding: 20px;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
     gap: 20px;
-    box-sizing: border-box; /* Avoid width issues with padding */
+    box-sizing: border-box;
 }
 
 .footer img {
-    width: 40px; /* Set the width of the images */
-    height: 40px; /* Set the height of the images */
-    border-radius: 50%; /* Make the images circular */
-    object-fit: cover; /* Ensure the images fit within the circle */
-    border: 2px solid white; /* Add a white border around the images */
-    transition: transform 0.3s ease; /* Add a smooth hover effect */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid white;
+    transition: transform 0.3s ease;
 }
 
 .footer img:hover {
-    transform: scale(1.1); /* Slightly enlarge the image on hover */
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
     .footer img {
-        width: 30px; /* Reduce size for smaller screens */
+        width: 30px;
         height: 30px;
     }
 }
-/* Hide all sections by default */
+
 .content-section {
     display: none;
-    width: 100%; /* Ensure sections take up the full width of the main container */
+    width: 100%;
 }
 
-/* Show the active section */
 .content-section.active {
     display: block;
 }
+
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Adjust columns to fit available space */
-    gap: 20px; /* Add spacing between grid items */
-    width: 100%; /* Ensure the grid takes up the full width */
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    width: 100%;
     text-align: center;
 }
-/* Skills grid styling */
+
 .skills-grid img {
-    width: 50%;
-    height: 100px; /* or whatever height you want */
-    object-fit: cover; /* ensures the image fills without stretching */
-    border-radius: 8px; /* optional: for rounded corners */
+    width: 80%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
 }
+
 .skills img {
-    width: 120px;
-    height: 120px;
-    object-fit: contain; /* Use 'contain' if you prefer full images with padding */
-    display: block;
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
     margin: 10px auto;
     border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}  
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
 
-/* Social logos in the footer */
 .social-logo {
     width: 40px;
     height: 40px;
@@ -295,7 +290,7 @@ header {
 .social-logo:hover {
     transform: scale(1.1);
 }
-/* Home Section */
+
 .home-content {
     display: flex;
     flex-direction: column;
@@ -304,16 +299,7 @@ header {
     gap: 10px;
 }
 
-.btnView {
-    padding: 10px 20px;
-    background-color: #012c1f;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-.btnDownload {
+.btnView, .btnDownload {
     padding: 10px 20px;
     background-color: #012c1f;
     color: white;
@@ -323,45 +309,53 @@ header {
     transition: background-color 0.3s ease;
 }
 
-.btn:hover {
+.btnView:hover, .btnDownload:hover {
     background-color: #034d2a;
 }
+
 form {
     max-width: 400px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
-  }
-  
-  label {
+}
+
+label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
-  }
-  
-  input[type="text"],
-  input[type="email"],
-  textarea {
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
     width: 100%;
-    padding: 12px;
+    padding: 8px;
+    margin-bottom: 10px;
+    border-radius: 4px;
     border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 16px;
     box-sizing: border-box;
-    margin-bottom: 15px;
-  }
-  
-  button {
-    background-color: #012c1f;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 6px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  button:hover {
-    background-color: #034d2a;
-  }
-  
-  
+}
+
+@media (max-width: 480px) {
+    .profile-name {
+        font-size: 16px;
+    }
+    .nav-list a {
+        font-size: 14px;
+    }
+    .skills img {
+        width: 80px;
+        height: 80px;
+    }
+    .skills-grid img {
+        width: 70%;
+        height: auto;
+    }
+    .main p {
+        font-size: 14px;
+    }
+    .btnView, .btnDownload {
+        padding: 8px 15px;
+        font-size: 14px;
+    }
+}
