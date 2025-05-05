@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="profile">
+            <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic">
+            <h2 class="profile-name">Hi, my name is <span style="color:aqua">Roed Joy Deceten D. Camba. </span><br>I am an IT student at STI Alaminos.</h2>
+        </div>
+    </header>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <div class="banner">
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="#home" data-content="home">Home</a></li>
+                    <li><a href="#about" data-content="about">About Me</a></li>
+                    <li><a href="#skills" data-content="skills">Skills</a></li>
+                    <li><a href="#projects" data-content="projects">Projects</a></li>
+                    <li><a href="#contact" data-content="contact">Contact Me</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Home Section -->
+            <section id="home" class="content-section">
+                <div class="home-content">
+                    <p>Hi there! I'm <strong>Roed Joy Deceten D. Camba</strong>, a passionate student, programmer, and web developer. Explore my portfolio to learn more about my skills, projects, and how to connect with me.</p>
+                    <br>
+                    <p>You can also view or download my CV to learn more about me.</p>
+                    <button class="btnView" onclick="viewCV()">View CV</button>
+                    <button class="btnDownload" onclick="downloadCV()">Download CV</button>
+                </div>
+            </section>
+        
+            <!-- About Section -->
+            <section id="about" class="content-section">
+                <h3>Roed Joy Deceten D. Camba</h3>
+                <p>I am a <strong>dedicated programmer</strong> and <strong>web developer</strong>, and a <strong>student</strong> with a passion for creating modern, user-friendly web applications. I enjoy solving complex problems and continuously learning new technologies to improve my craft.</p>
+                <p>When I'm not coding, I love exploring new tools, reading tech blogs, and collaborating with other developers.</p>
+                <p>I also enjoy riding motorcycles and going on long rides.</p>
+                <p>My goal is to leverage my skills and knowledge to contribute to innovative projects and make a positive impact in the tech industry.</p>
+            </section>
+        
+            <!-- Skills Section -->
+            <section id="skills" class="content-section">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                    <div>
+                        <img src="assets/Skills/Java.jpg" alt="Java" class="skill-image">
+                        <p><strong>Java</strong><br>Proficient in building robust backend systems and object-oriented programming.</p>
+                    </div>
+                    <div>
+                        <img src="assets/Skills/Javascript.jpg" alt="JavaScript" class="skill-image">
+                        <p><strong>JavaScript</strong><br>Skilled in creating interactive and dynamic web applications.</p>
+                    </div>
+                    <div>
+                        <img src="assets/Skills/CSS.jpg" alt="CSS" class="skill-image">
+                        <p><strong>CSS</strong><br>Experienced in designing visually appealing and responsive web pages.</p>
+                    </div>
+                    <div>
+                        <img src="assets/Skills/CSharp.jpg" alt="C#" class="skill-image">
+                        <p><strong>C#</strong><br>Proficient in developing desktop applications and game development with Unity.</p>
+                    </div>
+                    <div>
+                        <img src="assets/Skills/C++.png" alt="C++" class="skill-image">
+                        <p><strong>C++</strong><br>Strong foundation in system-level programming and performance optimization.</p>
+                    </div>
+                    <div>
+                        <img src="assets/Skills/HTML.jpg" alt="HTML" class="skill-image">
+                        <p><strong>HTML</strong><br>Expert in structuring web pages with semantic and accessible markup.</p>
+                    </div>
+                    <div>
+                        <img src="assets/Skills/Python.png" alt="Python" class="skill-image">
+                        <p><strong>Python</strong><br>Experienced in scripting, data analysis, and building backend systems.</p>
+                    </div>
+                    <div>
+                        <img src="assets/Skills/SSMS.png" alt="SSMS" class="skill-image">
+                        <p><strong>SSMS</strong><br>Proficient in managing and querying databases using SQL Server Management Studio.</p>
+                    </div>
+                    <div>
+                        <img src="assets/Skills/android.jpg" alt="Android Studio" class="skill-image">
+                        <p><strong>Android Studio</strong><br>Proficient in developing Android games.</p>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Projects Section -->
+            <section id="projects" class="content-section">
+                <p>Here are some of the projects I have worked on:</p>
+                <ul>
+                    <li><strong>Portfolio Website</strong> - A personal website showcasing my skills and projects.</li>
+                    <li><strong>Weather App</strong> - A web application that provides real-time weather updates.</li>
+                    <li><strong>Task Manager</strong> - A tool to manage daily tasks and improve productivity.</li>
+                </ul>
+                <p>Check out my <a href="https://github.com/Noob-Pro-grammer" target="_blank">GitHub</a> for more projects and code samples.</p>
+            </section>
+        
+            <!-- Contact Section -->
+            <section id="contact" class="content-section">
+                <p>I'd love to hear from you! Feel free to reach out to me.</p>
+                <form>
+                    <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+                    <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+                    <textarea id="message" name="message" rows="5" cols="40" placeholder="Enter your message"></textarea><br><br>
+                  
+                    <button type="submit" class="submit">Submit</button>
+                  </form>
+                <p>Let's connect and collaborate!</p>
+            </section>
+        </main>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="https://www.facebook.com/share/16dNVGSwHz/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/fb.avif" alt="Facebook Logo" class="social-logo">
+        </a>
+        <a href="https://www.linkedin.com/in/roedjoycamba" target="_blank" rel="noopener noreferrer">
+            <img src="assets/linked.jpg" alt="LinkedIn Logo" class="social-logo">
+        </a>
+        <a href="https://github.com/Noob-Pro-grammer" target="_blank" rel="noopener noreferrer">
+            <img src="assets/github.jpg" alt="GitHub Logo" class="social-logo">
+        </a>
+        <a href="https://www.instagram.com/rj.camba/?igsh=ajE4aDlsdnB1OGJt&fbclid=IwY2xjawKEVP1leHRuA2FlbQIxMABicmlkETFQWmpGZGdIVUVHenVhUGtmAR650p9UUOI6_Jo8-O_Pej3rE4ZSJgDVG8sEdZuzyRKeQuuwEu0zQpoh8W9jhQ_aem_CjqNsxoiHwR9rQNXu6Z1Ng#" target="_blank" rel="noopener noreferrer">
+            <img src="assets/ig.avif" alt="Instagram Logo" class="social-logo">
+        </a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
