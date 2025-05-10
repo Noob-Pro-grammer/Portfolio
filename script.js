@@ -39,17 +39,3 @@ document.addEventListener('DOMContentLoaded', () => {
         updateContent('home', defaultLink);
     }
 });
-// Function to view the CV
-function viewCV() {
-    // Open the CV in a new tab
-    window.open('assets/Roed_Joy_Deceten_Camba_CV.pdf', '_blank');
-}
-
-// Function to download the CV
-function downloadCV() {
-    // Create a temporary link element
-    const link = document.createElement('a');
-    link.href = 'assets/Roed_Joy_Deceten_Camba_CV.pdf'; // Path to the CV file
-    link.download = 'Roed_Joy_Deceten_Camba_CV.pdf'; // Desired file name for the download
-    link.click(); // Trigger the download
-}
