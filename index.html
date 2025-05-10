@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
     <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <!-- Header Section -->
@@ -36,8 +37,7 @@
                     <p>Hi there! I'm <strong>Roed Joy Deceten D. Camba</strong>, a passionate student, programmer, and web developer. Explore my portfolio to learn more about my skills, projects, and how to connect with me.</p>
                     <br>
                     <p>You can also view or download my CV to learn more about me.</p>
-                    <button class="btnView" onclick="viewCV()">View CV</button>
-                    <button class="btnDownload" onclick="downloadCV()">Download CV</button>
+                    <a href="assets/Roed_Joy_Deceten_Camba _CV.pdf" target="_blank" class="btnDownload">Download CV</a>
                 </div>
             </section>
         
@@ -52,43 +52,52 @@
         
             <!-- Skills Section -->
             <section id="skills" class="content-section">
-                <h2>Skills</h2>
                 <div class="skills-grid">
-                    <div>
-                        <img src="assets/Skills/Java.jpg" alt="Java" class="skill-image">
-                        <p><strong>Java</strong><br>Proficient in building robust backend systems and object-oriented programming.</p>
-                    </div>
-                    <div>
-                        <img src="assets/Skills/Javascript.jpg" alt="JavaScript" class="skill-image">
-                        <p><strong>JavaScript</strong><br>Skilled in creating interactive and dynamic web applications.</p>
-                    </div>
-                    <div>
-                        <img src="assets/Skills/CSS.jpg" alt="CSS" class="skill-image">
-                        <p><strong>CSS</strong><br>Experienced in designing visually appealing and responsive web pages.</p>
-                    </div>
-                    <div>
-                        <img src="assets/Skills/CSharp.jpg" alt="C#" class="skill-image">
-                        <p><strong>C#</strong><br>Proficient in developing desktop applications and game development with Unity.</p>
-                    </div>
-                    <div>
-                        <img src="assets/Skills/C++.png" alt="C++" class="skill-image">
-                        <p><strong>C++</strong><br>Strong foundation in system-level programming and performance optimization.</p>
-                    </div>
-                    <div>
-                        <img src="assets/Skills/HTML.jpg" alt="HTML" class="skill-image">
-                        <p><strong>HTML</strong><br>Expert in structuring web pages with semantic and accessible markup.</p>
-                    </div>
-                    <div>
-                        <img src="assets/Skills/Python.png" alt="Python" class="skill-image">
-                        <p><strong>Python</strong><br>Experienced in scripting, data analysis, and building backend systems.</p>
-                    </div>
-                    <div>
-                        <img src="assets/Skills/SSMS.png" alt="SSMS" class="skill-image">
-                        <p><strong>SSMS</strong><br>Proficient in managing and querying databases using SQL Server Management Studio.</p>
-                    </div>
-                    <div>
-                        <img src="assets/Skills/android.jpg" alt="Android Studio" class="skill-image">
-                        <p><strong>Android Studio</strong><br>Proficient in developing Android games.</p>
+                    <div class="skill-container">
+                        <div class="skill-item">
+                            <i class="fab fa-java skill-icon" style="color: #007396;"></i>
+                            <p><strong>Java</strong><br>Proficient in building robust backend systems and object-oriented programming.</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-js skill-icon" style="color: #f7df1e;"></i>
+                            <p><strong>JavaScript</strong><br>Skilled in creating interactive and dynamic web applications.</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt skill-icon" style="color: #1572b6;"></i>
+                            <p><strong>CSS</strong><br>Experienced in designing visually appealing and responsive web pages.</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-hashtag skill-icon" style="color: #6d2091;"></i>
+                            <p><strong>C#</strong><br>Proficient in developing desktop applications and game development with Unity.</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-microchip skill-icon" style="color: #007396;"></i>
+                            <p><strong>C++</strong><br>Strong foundation in system-level programming and performance optimization.</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-html5 skill-icon" style="color: #e34c26;"></i>
+                            <p><strong>HTML</strong><br>Expert in structuring web pages with semantic and accessible markup.</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-python skill-icon" style="color: #306998;"></i>
+                            <p><strong>Python</strong><br>Experienced in scripting, data analysis, and backend systems.</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon" style="color: #e0c919;"></i>
+                            <p><strong>SSMS</strong><br>Proficient in managing and querying databases with SQL Server.</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-android skill-icon" style="color: #15f120;"></i>
+                            <p><strong>Android Studio</strong><br>Proficient in developing Android games.</p>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -96,11 +105,12 @@
             <!-- Projects Section -->
             <section id="projects" class="content-section">
                 <p>Here are some of the projects I have worked on:</p>
-                <ul>
-                    <li><strong>Portfolio Website</strong> - A personal website showcasing my skills and projects.</li>
-                    <li><strong>Weather App</strong> - A web application that provides real-time weather updates.</li>
-                    <li><strong>Task Manager</strong> - A tool to manage daily tasks and improve productivity.</li>
-                </ul>
+                <div class="project-grid">
+                    <div class="project-item">
+                        <img src="assets/project.jpg" alt="Project 1">
+                        <h4>ITS Grocery</h4>
+                        <p>A comprehensive grocery management system with features for stock management, sales tracking, and user account management.</p>
+                </div>
                 <p>Check out my <a href="https://github.com/Noob-Pro-grammer" target="_blank">GitHub</a> for more projects and code samples.</p>
             </section>
         
@@ -112,7 +122,7 @@
                     <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
                     <textarea id="message" name="message" rows="5" cols="40" placeholder="Enter your message"></textarea><br><br>
                   
-                    <button type="submit" class="submit">Submit</button>
+                    <button type="submit" class="submit">Send</button>
                   </form>
                 <p>Let's connect and collaborate!</p>
             </section>
