@@ -1,6 +1,6 @@
 @font-face {
     font-family: 'Montserrat';
-    src: url('Portfolio/assets/Montserrat.ttf') format('truetype');
+    src: url('C:/Users/MY PC/VSCode/Portfolio/assets/Montserrat.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
     font-display: swap;
@@ -270,15 +270,6 @@ header {
     border-radius: 8px;
 }
 
-.skills img {
-    width: 100px;
-    height: 100px;
-    object-fit: contain;
-    margin: 10px auto;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
 .social-logo {
     width: 40px;
     height: 40px;
@@ -358,4 +349,27 @@ textarea {
         padding: 8px 15px;
         font-size: 14px;
     }
+}
+.btnDownload {
+    text-decoration: none;
+    background-color: #012c1f;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.skill-icon {
+  font-size: 48px;
+  margin-bottom: 10px;
 }
