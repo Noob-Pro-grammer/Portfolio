@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="profile">
+            <img src="assets/profile.jpg" alt="Profile Picture" class="profile-pic">
+            <h2 class="profile-name">Hi, my name is <span style="color:aqua">Roed Joy Deceten D. Camba. </span><br>I am an IT student at STI Alaminos.</h2>
+        </div>
+    </header>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <div class="banner">
+            <nav class="navbar">
+                <ul class="nav-list">
+                    <li><a href="#home" data-content="home">Home</a></li>
+                    <li><a href="#about" data-content="about">About Me</a></li>
+                    <li><a href="#skills" data-content="skills">Skills</a></li>
+                    <li><a href="#projects" data-content="projects">Projects</a></li>
+                    <li><a href="#contact" data-content="contact">Contact Me</a></li>
+                    <li><a href="#blogs" data-content="blogs">Blogs</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <main class="main">
+            <!-- Home Section -->
+            <section id="home" class="content-section">
+                <div class="home-content">
+                    <p>Hi there! I'm <strong>Roed Joy Deceten D. Camba</strong>, a passionate student, programmer, and web developer. Explore my portfolio to learn more about my skills, projects, and how to connect with me.</p>
+                    <br>
+                    <p>You can also view or download my CV to learn more about me.</p>
+                    <a href="assets/Roed_Joy_Deceten_Camba _CV.pdf" target="_blank" class="btnDownload">Download CV</a>
+                </div>
+            </section>
+        
+            <!-- About Section -->
+            <section id="about" class="content-section">
+                <h3>Roed Joy Deceten D. Camba</h3>
+                <p>I am a <strong>dedicated programmer</strong> and <strong>web developer</strong>, and a <strong>student</strong> with a passion for creating modern, user-friendly web applications. I enjoy solving complex problems and continuously learning new technologies to improve my craft.</p>
+                <p>When I'm not coding, I love exploring new tools, reading tech blogs, and collaborating with other developers.</p>
+                <p>I also enjoy riding motorcycles and going on long rides.</p>
+                <p>My goal is to leverage my skills and knowledge to contribute to innovative projects and make a positive impact in the tech industry.</p>
+            </section>
+        
+            <!-- Skills Section -->
+            <section id="skills" class="content-section">
+                <div class="skills-grid">
+                    <div class="skill-container">
+                        <div class="skill-item">
+                            <i class="fab fa-java skill-icon" style="color: #007396;"></i>
+                            <p><strong>Java</strong><br>Proficient in building robust backend systems and object-oriented programming.</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-js skill-icon" style="color: #f7df1e;"></i>
+                            <p><strong>JavaScript</strong><br>Skilled in creating interactive and dynamic web applications.</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-css3-alt skill-icon" style="color: #1572b6;"></i>
+                            <p><strong>CSS</strong><br>Experienced in designing visually appealing and responsive web pages.</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-hashtag skill-icon" style="color: #6d2091;"></i>
+                            <p><strong>C#</strong><br>Proficient in developing desktop applications and game development with Unity.</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-microchip skill-icon" style="color: #007396;"></i>
+                            <p><strong>C++</strong><br>Strong foundation in system-level programming and performance optimization.</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-html5 skill-icon" style="color: #e34c26;"></i>
+                            <p><strong>HTML</strong><br>Expert in structuring web pages with semantic and accessible markup.</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-python skill-icon" style="color: #306998;"></i>
+                            <p><strong>Python</strong><br>Experienced in scripting, data analysis, and backend systems.</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fas fa-database skill-icon" style="color: #e0c919;"></i>
+                            <p><strong>SSMS</strong><br>Proficient in managing and querying databases with SQL Server.</p>
+                        </div>
+
+                        <div class="skill-item">
+                            <i class="fab fa-android skill-icon" style="color: #15f120;"></i>
+                            <p><strong>Android Studio</strong><br>Proficient in developing Android games.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        
+            <!-- Projects Section -->
+            <section id="projects" class="content-section">
+                <p>Here are some of the projects I have worked on:</p>
+                <div class="project-grid">
+                    <div class="project-item">
+                        <img src="assets/project.jpg" alt="Project 1">
+                        <h4>ITS Grocery</h4>
+                        <p>A comprehensive grocery management system with features for stock management, sales tracking, and user account management.</p>
+                </div>
+                <p>Check out my <a href="https://github.com/Noob-Pro-grammer" target="_blank">GitHub</a> for more projects and code samples.</p>
+            </section>
+        
+            <!-- Contact Section -->
+            <section id="contact" class="content-section">
+                <p>I'd love to hear from you! Feel free to reach out to me.</p>
+                <form>
+                    <input type="text" id="name" name="name" placeholder="Enter your name"><br><br>
+                    <input type="email" id="email" name="email" placeholder="Enter your email"><br><br>
+                    <textarea id="message" name="message" rows="5" cols="40" placeholder="Enter your message"></textarea><br><br>
+                  
+                    <button type="submit" class="submit">Send</button>
+                  </form>
+                <p>Let's connect and collaborate!</p>
+            </section>
+            
+            <!-- Blogs -->
+            <section id="blogs" class="content-section">
+                <h2>My Journey at STI Alaminos</h2>
+                <div class="blogs-container">
+                    <!-- Blog Card 1 -->
+                    <div class="blog-card">
+                        <div class="blog">
+                            <div class="blog-front">
+                                <img src="Assets/party.jpg" alt="it">
+                                <p class="blog-title">Year End Party</p>
+                            </div>
+                            <div class="blog-back">
+                                <p>
+                                    The Year End Party was a fantastic event that brought together students and faculty. It was a great opportunity to celebrate our achievements and build stronger connections within the STI Alaminos community.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Card 2 -->
+                    <div class="blog-card">
+                        <div class="blog">
+                            <div class="blog-front">
+                                <img src="Assets/fieldtrip.jpg" alt="Field Trips">
+                                <p class="blog-title">Field Trips</p>
+                            </div>
+                            <div class="blog-back">
+                                <p>
+                                    The field trips organized by STI Alaminos were eye-opening experiences. They allowed me to see the practical applications of what we learn in class and inspired me to think about my future career in IT.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Card 3 -->
+                    <div class="blog-card">
+                        <div class="blog">
+                            <div class="blog-front">
+                                <img src="Assets/codefest.jpg" alt="code">
+                                <p class="blog-title">Joining in Contest</p>
+                            </div>
+                            <div class="blog-back">
+                                <p>
+                                    We won the Codefest competition Local Level in STI Alaminos, which was a thrilling experience. It pushed us to think creatively and apply our coding skills in real-world scenarios.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Card 4 -->
+                    <div class="blog-card">
+                        <div class="blog">
+                            <div class="blog-front">
+                                <img src="Assets/OJT.jpg" alt="OJT">
+                                <p class="blog-title">On the Job Training</p>
+                            </div>
+                            <div class="blog-back">
+                                <p>
+                                    The On-the-Job Training (OJT) experience was invaluable. It provided me with hands-on exposure to the industry, allowing me to apply my theoretical knowledge in a practical setting.
+                                    I learned about real-world challenges and how to overcome them, which has significantly enhanced my skills and confidence as a programmer.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Card 5 -->
+                    <div class="blog-card">
+                        <div class="blog">
+                            <div class="blog-front">
+                                <img src="Assets/presentation.jpg" alt="IT Fair">
+                                <p class="blog-title">Presentation of Systems</p>
+                            </div>
+                            <div class="blog-back">
+                                <p>
+                                    The IT Fair was an exciting event where I showcased my projects and learned from industry experts. It inspired me to pursue more tech-related activities.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Blog Card 6 -->
+                    <div class="blog-card">
+                        <div class="blog">
+                            <div class="blog-front">
+                                <img src="Assets/awards.jpg" alt="Awards">
+                                <p class="blog-title">Receiving Awards</p>
+                            </div>
+                            <div class="blog-back">
+                                <p>
+                                    Just recently, I received an award for my outstanding performance in the IT Fair. It was a proud moment that motivated me to continue striving for excellence in my studies and projects.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="https://www.facebook.com/share/16dNVGSwHz/" target="_blank" rel="noopener noreferrer">
+            <img src="assets/fb.avif" alt="Facebook Logo" class="social-logo">
+        </a>
+        <a href="https://www.linkedin.com/in/roedjoycamba" target="_blank" rel="noopener noreferrer">
+            <img src="assets/linked.jpg" alt="LinkedIn Logo" class="social-logo">
+        </a>
+        <a href="https://github.com/Noob-Pro-grammer" target="_blank" rel="noopener noreferrer">
+            <img src="assets/github.jpg" alt="GitHub Logo" class="social-logo">
+        </a>
+        <a href="https://www.instagram.com/rj.camba/?igsh=ajE4aDlsdnB1OGJt&fbclid=IwY2xjawKEVP1leHRuA2FlbQIxMABicmlkETFQWmpGZGdIVUVHenVhUGtmAR650p9UUOI6_Jo8-O_Pej3rE4ZSJgDVG8sEdZuzyRKeQuuwEu0zQpoh8W9jhQ_aem_CjqNsxoiHwR9rQNXu6Z1Ng#" target="_blank" rel="noopener noreferrer">
+            <img src="assets/ig.avif" alt="Instagram Logo" class="social-logo">
+        </a>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
